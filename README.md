@@ -1,5 +1,5 @@
 # Deno-MongoDB REST API
-Basic CRUD operations using the  Deno backend framework and MongoDB daabase
+Basic CRUD operations using the  Deno backend framework and MongoDB database
 
 Deno's Third Party modules used -
 1. OAK (https://deno.land/x/oak/mod.ts) - similar to Koala frameword for nodejs
