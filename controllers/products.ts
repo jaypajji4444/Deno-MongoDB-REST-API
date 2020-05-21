@@ -108,6 +108,7 @@ const updateProduct=async({params,response,request}:{params:{id:string},response
     try{
     const body= await request.body();
     const product :Product | undefined= await productsCollection.updateOne({_id:{$oid:params.id}},body.value);
+    // This does not return updated object
     if(!product){
         response.status = 404
         response.body = {
@@ -145,10 +146,19 @@ const updateProduct=async({params,response,request}:{params:{id:string},response
  */
 const deleteProduct = async({ params, response }: { params: { id: string }, response: any }) => {
     const deletedProduct=await productsCollection.deleteOne({_id:{$oid:params.id}})
-
-    response.body = { 
-        success: true,
-        msg: 'Product removed',
+    // deletedProduct=> has count of number of object delete
+    if(deletedProduct){
+        response.body = { 
+            success: true,
+            msg: 'Product removed',
+        }
+    }
+    else{
+        response.status=400;
+        response.body={
+            success:false,
+            data:"Could not delete"
+        }
     }
 }
 
