@@ -1,5 +1,5 @@
 import {Router} from "https://deno.land/x/oak/mod.ts";
-import {getAllProducts, getProduct ,addProduct, deleteProduct, updateProduct} from "./controllers/products.ts"
+import {getAllProducts, getProduct ,addProduct, deleteProduct, updateProduct} from "../controllers/products.ts"
 
 const router=new Router();
 

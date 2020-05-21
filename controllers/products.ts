@@ -1,7 +1,7 @@
 // Instance of products
-import { Product } from '../types.ts'
+import { Product } from "../Types/productTypes.ts"
 // Database object
-import db from "../DB.ts";
+import db from "../db/DB.ts"
 // Making your collection
 const productsCollection=db.collection("products")
 
