@@ -3,10 +3,10 @@ import {getAllProducts, getProduct ,addProduct, deleteProduct, updateProduct} fr
 
 const router=new Router();
 
-router.get("/api/v1/products",getAllProducts)
-router.get("/api/v1/products/:id",getProduct)
-router.post("/api/v1/products",addProduct)
-router.delete("/api/v1/products/:id",deleteProduct)
-router.put("/api/v1/products/:id",updateProduct)
+router.get("/api/products",getAllProducts)
+router.get("/api/products/:id",getProduct)
+router.post("/api/products",addProduct)
+router.delete("/api/products/:id",deleteProduct)
+router.put("/api/products/:id",updateProduct)
 
 export default router;
